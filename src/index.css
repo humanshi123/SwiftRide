@@ -1,0 +1,233 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #1D3557;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.login-page {
+  min-height: 100vh;
+  background: #212422;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.login-form-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-image {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 16px;
+}
+.login-from-inner {
+  width: 100%;
+  padding: 13%;
+}
+.login-image img {
+  width: 100%;
+  object-fit: cover;
+}
+h2.h2-heading {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.login-from-inner h2.h2-heading {
+  color: #fff;
+  margin-top: 50px;
+}
+.login-from-inner input {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background-color: transparent;
+  margin: 0px auto;
+  padding: 6px 4px 4px 14px;
+  height: 54px;
+  outline: none !important;
+  font-size: 12px;
+  color: rgb(255 255 255 / 85%);
+  transition: all .2s ease-in-out;
+  border: 1px solid rgba(145, 158, 171, 0.20);
+}
+.login-from-inner label {
+  position: absolute;
+  top: 21px;
+  left: 12px;
+  text-align: left;
+  display: inline-block;
+  padding: 0 4px;
+  height: 14px;
+  background: #212422;
+  margin: 0px auto;
+  cursor: text;
+  transition: all .15s ease-in-out;
+  overflow: hidden;
+  color: #919EAB;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+ 
+.login-from-inner input:valid + label, .login-from-inner input:focus + label {
+  top: -5px;
+  color: #fff;
+  font-weight: 600;
+}
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+button.button {
+  border-radius: 10px;
+  background: #019268;
+  width: 100%;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 125%;
+  font-weight: 600;
+  padding: 12px;
+  margin-top: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.has-submenu > div {
+  cursor: pointer;
+  width: calc(100% - 41px);
+  display: flex;
+  align-items: center;
+}
+
+.has-submenu > div .toggle-icon {
+  margin-left: auto;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 252px 1fr;
+}
+.main-nav ul li a{
+  display: flex;
+ column-gap: 17px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-nav ul li  {
+margin-bottom: 21px;
+color: #353836;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.12px;
+}
+.main-nav ul.submenu {
+  padding-left: 39px;
+  margin: 20px 0 0;
+}
+.main-nav ul li:hover , .main-nav ul li a.active {
+  color: #019268;
+}
+.main-nav ul li:hover svg path, .main-nav ul li:hover svg circle,
+.main-nav ul li a.active svg path, .main-nav ul li a.active svg circle{
+  stroke: #019268;
+}
+input:focus-visible {
+  outline: none;
+}
+.investor-table thead th {
+  padding: 15px 0;
+}
+.investor-table tbody td {
+  padding: 22px 0;
+}
+.investor-table tbody tr:nth-child(odd) {
+background: #F6F7FD;
+}
+.paginationnnnn ul.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.paginationnnnn ul.pagination li a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.paginationnnnn li.previous {
+  background: url("/public/Chevron-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paginationnnnn li.next {
+  background: url("/public/chevron-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paginationnnnn ul.pagination li.active a {
+  border-radius: 8px;
+  background: #019268;
+  color: #fff;
+}
+.paginationnnnn ul.pagination  li.disabled a {
+  cursor: not-allowed;
+}
+/*****************media***************/
+@media(max-width: 1023px){
+  .login-page {
+    grid-template-columns: 1fr 1fr;
+}
+.login-from-inner {
+  padding: 50px;
+}
+}
+@media(max-width: 767px){
+  .login-page {
+    grid-template-columns: 1fr;
+}
+.login-from-inner {
+  width: 100%;
+  padding: 20px;
+}
+}
