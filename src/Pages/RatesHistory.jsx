@@ -1,9 +1,12 @@
 import React from 'react'
+import PriceLineGraph from '../Components/PriceLineGraph'
 
 export default function RatesHistory() {
   return (
     <div>
-      <h1>Rates History</h1>
+      <div className="line-graph">
+      <PriceLineGraph />
+      </div>
     </div>
   )
 }

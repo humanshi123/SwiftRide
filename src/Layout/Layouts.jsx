@@ -10,10 +10,10 @@ export default function Layouts() {
           <Sidebar />
         </div>
         <div className="right-content">
-          <div className="header-wrapper">
+          <div className="header-wrapper bg-[#fff]">
             <Header />
           </div>
-          <div className="outlet-wrapper h-full p-8 bg-[#F3F4F6]">
+          <div className="outlet-wrapper h-full p-8">
             <Outlet />
           </div>
         </div>

@@ -9,13 +9,15 @@ export default function Investor() {
 
   return (
     <>
-    <div className="searchhh mb-6 grid grid-cols-2 items-center">
-      <h1 className="text-blue-950 text-lg font-bold">List of invesrors</h1>
+    <div className="searchhh mb-6 flex justify-between items-center">
+      <h2 className="lato text-blue-950 text-lg font-bold">List of invesrors</h2>
       <SearchBar />
     </div>
       <div className='dashboard'>
 
      <InvestorTable />
+     
+     <h2 className="lato text-blue-950 text-lg font-bold mb-4 mt-">In-flow Log</h2>
      <InvestorTable2 />
       </div>
     </>

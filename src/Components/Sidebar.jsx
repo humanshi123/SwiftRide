@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import UserProfile from './UserProfile';
 import Logo from '../assets/logo.png';
 
 export default function Sidebar() {
@@ -50,12 +51,13 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className='side-bar'>
+      <div className='side-bar flex justify-between flex-col h-[100%]'>
+        <div className=''>
         <div className='logo-box bg-neutral-800 py-6 grid place-items-center'>
          <img src={Logo} alt='Logo' />
         </div>
         <nav className='main-nav pt-7'>
-          <ul className='px-[25px]'>
+          <ul className=''> 
             <li className={hasSubmenu('investors') ? 'has-submenu' : ''} >
 
               {hasSubmenu('investors') ? (
@@ -316,6 +318,8 @@ export default function Sidebar() {
             </li>
           </ul>
         </nav>
+        </div>
+        <UserProfile />
       </div>
     </>
   );

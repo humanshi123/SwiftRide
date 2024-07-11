@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom';
 
 // Sample data (replace with your actual data)
 const investorsData = [
@@ -16,7 +17,7 @@ const investorsData = [
     investorImage: 'https://via.placeholder.com/150', // Example image URL
   },
   {
-    id: 2,
+    id: 2, 
     firstName: 'Jane',
     lastName: 'Smith',
     phoneNumber: '+1987654321',
@@ -35,7 +36,7 @@ const investorsData = [
     carsOwned: 1,
     investmentAmount: '$5,000',
     investmentDate: '2023-06-15',
-    investorImage: 'https://via.placeholder.com/150', // Example image URL
+    investorImage: '', // Example image URL
   },
   {
     id: 4,
@@ -57,7 +58,7 @@ const investorsData = [
     carsOwned: 1,
     investmentAmount: '$5,000',
     investmentDate: '2023-06-15',
-    investorImage: 'https://via.placeholder.com/150', // Example image URL
+    investorImage: '', // Example image URL
   },
   {
     id: 6,
@@ -69,7 +70,7 @@ const investorsData = [
     investmentAmount: '$5,000',
     investmentDate: '2023-06-15',
     investorImage: 'https://via.placeholder.com/150', // Example image URL
-  },
+  }, 
   {
     id: 7,
     firstName: 'Jane',
@@ -112,7 +113,7 @@ const investorsData = [
     carsOwned: 1,
     investmentAmount: '$5,000',
     investmentDate: '2023-06-15',
-    investorImage: 'https://via.placeholder.com/150', // Example image URL
+    investorImage: '', // Example image URL 
   },
   
 ];
@@ -127,19 +128,23 @@ const InvestorTable = () => {
   const displayInvestors = investorsData
     .slice(pagesVisited, pagesVisited + investorsPerPage)
     .map((investor) => (
-      <tr key={investor.id}>
-        <td>{investor.id}</td>
-        <td>{investor.firstName}</td>
-        <td>{investor.lastName}</td>
-        <td>{investor.phoneNumber}</td>
-        <td>{investor.email}</td>
-        <td>{investor.carsOwned}</td>
-        <td>{investor.investmentAmount}</td>
-        <td>{investor.investmentDate}</td>
-        <td>
-          imgg
-        </td>
-      </tr>
+    <tr key={investor.id}>
+       
+      <td>{investor.id}</td>
+      <td><Link to="/investor-details">{investor.firstName}</Link></td>
+      <td><Link to="/investor-details">{investor.lastName}</Link></td>
+      <td>{investor.phoneNumber}</td>
+      <td>{investor.email}</td>
+      <td><strong>{investor.carsOwned}</strong></td>
+      <td>{investor.investmentAmount}</td>
+      <td>{investor.investmentDate}</td> 
+      <td>
+        {investor.investorImage ? (
+          <img className='m-auto' src={investor.investorImage} alt={`${investor.firstName} ${investor.lastName}`} width="50" height="50" />
+        ) : '-'}
+      </td>
+      
+    </tr>
     ));
 
   // Calculate number of pages
