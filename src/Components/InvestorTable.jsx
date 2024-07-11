@@ -131,8 +131,14 @@ const InvestorTable = () => {
     <tr key={investor.id}>
        
       <td>{investor.id}</td>
-      <td><Link to="/investor-details">{investor.firstName}</Link></td>
-      <td><Link to="/investor-details">{investor.lastName}</Link></td>
+      <td>
+      <Link to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
+            {investor.firstName}
+          </Link>
+      </td>
+      <td> <Link to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
+            {investor.lastName}
+          </Link></td>
       <td>{investor.phoneNumber}</td>
       <td>{investor.email}</td>
       <td><strong>{investor.carsOwned}</strong></td>

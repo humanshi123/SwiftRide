@@ -7,11 +7,25 @@ import SearchBar from '../Components/SearchBar'
 import CarOwnedTable from '../Components/CarOwnedTable';
 import ROITable from '../Components/ROITable';
 import ExpenseDetailTable from '../Components/ExpenseDetailTable';
+import { useLocation, Link } from 'react-router-dom';
 
 const InvestorDetails = () => {
-
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const firstName = queryParams.get('firstName');
+  const lastName = queryParams.get('lastName');
   return (
     <>
+   <div className='absolute top-[25px] flex gap-6 items-center'>
+    <button>
+      <Link to='/investors'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
+  <path d="M18.75 8L11.25 15.5L18.75 23" stroke="#353836" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+       </Link>
+    </button>
+   <p className='text-blue-950 text-[22px] font-bold font-[Lato]'>Investor details:{firstName} {lastName} </p>
+   </div>
        <div className='box-card p-[24px] bg-[#fff] border-2 border-solid border-[#EDEDED] rounded-xl'>
           <div className='box-card-header  flex justify-between align-center pb-[20px] mb-[20px] gap-[20px] border-b border-solid border-[#E2E2E2]'> 
               <h4 className='lato text-[18px] font-bold'>Information</h4>

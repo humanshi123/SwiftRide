@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layouts from "../Layout/Layouts";
 import Investor from "../Pages/Investor";
@@ -16,8 +16,8 @@ import Login from "../Pages/Login";
 import SignUps from "../Pages/SignUps";
 import Bookings from "../Pages/Bookings";
 import ActiveDrivers from "../Pages/ActiveDrivers";
-import InvestorDetails from '../Pages/InvestorDetails';
-import { PageNameProvider, usePageName } from '../Contexts/PageNameContext'; 
+import InvestorDetails from "../Pages/InvestorDetails";
+import { PageNameProvider, usePageName } from "../Contexts/PageNameContext";
 
 const PageWrapper = ({ children, name }) => {
   const { setPageName } = usePageName();
@@ -34,21 +34,126 @@ export default function AllRoutes() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/" element={<Layouts />}>
-            <Route path="/investors" element={<PageWrapper name="Investors"><Investor /></PageWrapper>} />
-            <Route path="/VehicleStatus" element={<PageWrapper name="Vehicle Status"><VehicleStatus /></PageWrapper>} />
-            <Route path="/ServiceAlerts" element={<PageWrapper name="Service Alerts"><ServiceAlerts /></PageWrapper>} />
-            <Route path="/RatesHistory" element={<PageWrapper name="Rates History"><RatesHistory /></PageWrapper>} />
-            <Route path="/VehicleMaintenance" element={<PageWrapper name="Vehicle Maintenance"><VehicleMaintenance /></PageWrapper>} />
-            <Route path="/PendingVehicles" element={<PageWrapper name="Pending Vehicles"><PendingVehicles /></PageWrapper>} />
-            <Route path="/Expences" element={<PageWrapper name="Expences"><Expences /></PageWrapper>} />
-            <Route path="/Utilities" element={<PageWrapper name="Utilities"><Utilities /></PageWrapper>} />
-            <Route path="/Support" element={<PageWrapper name="Support"><Support /></PageWrapper>} />
-            <Route path="/Operations" element={<PageWrapper name="Operations"><Operations /></PageWrapper>} />
-            <Route path="/Reports" element={<PageWrapper name="Reports"><Reports /></PageWrapper>} />
-            <Route path="/SignUps" element={<PageWrapper name="Sign Ups"><SignUps /></PageWrapper>} />
-            <Route path="/bookings" element={<PageWrapper name="Bookings"><Bookings /></PageWrapper>} />
-            <Route path='/investor-details' element={<PageWrapper name="Investor Details:">< InvestorDetails/> </PageWrapper>} />
-            <Route path="/Activedrivers" element={<PageWrapper name="Active Drivers"><ActiveDrivers /></PageWrapper>} />
+            <Route
+              path="/investors"
+              element={
+                <PageWrapper name="Investors">
+                  <Investor />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/VehicleStatus"
+              element={
+                <PageWrapper name="Vehicle Status">
+                  <VehicleStatus />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/ServiceAlerts"
+              element={
+                <PageWrapper name="Service Alerts">
+                  <ServiceAlerts />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/RatesHistory"
+              element={
+                <PageWrapper name="Rates History">
+                  <RatesHistory />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/VehicleMaintenance"
+              element={
+                <PageWrapper name="Vehicle Maintenance">
+                  <VehicleMaintenance />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/PendingVehicles"
+              element={
+                <PageWrapper name="Pending Vehicles">
+                  <PendingVehicles />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Expences"
+              element={
+                <PageWrapper name="Expences">
+                  <Expences />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Utilities"
+              element={
+                <PageWrapper name="Utilities">
+                  <Utilities />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Support"
+              element={
+                <PageWrapper name="Support">
+                  <Support />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Operations"
+              element={
+                <PageWrapper name="Operations">
+                  <Operations />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Reports"
+              element={
+                <PageWrapper name="Reports">
+                  <Reports />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/SignUps"
+              element={
+                <PageWrapper name="Sign Ups">
+                  <SignUps />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/bookings"
+              element={
+                <PageWrapper name="Bookings">
+                  <Bookings />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/investor-details"
+              element={
+                <PageWrapper>
+                  <InvestorDetails />{" "}
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/Activedrivers"
+              element={
+                <PageWrapper name="Active Drivers">
+                  <ActiveDrivers />
+                </PageWrapper>
+              }
+            />
           </Route>
         </Routes>
       </BrowserRouter>
