@@ -1,9 +1,10 @@
 import React from 'react'
+import ExpensesTable from '../Components/ExpensesTable'
 
 export default function Expences() {
   return (
     <div>
-      <h1>Expences</h1>
+      <ExpensesTable />
     </div>
   )
 }

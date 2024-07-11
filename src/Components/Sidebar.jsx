@@ -7,22 +7,18 @@ export default function Sidebar() {
   const location = useLocation();
   const [activeMenu, setActiveMenu] = useState('');
 
-  // Function to handle submenu toggle
   const toggleSubMenu = (menuItem) => {
     setActiveMenu(activeMenu === menuItem ? '' : menuItem);
   };
  
-  // Function to determine if a menu item has submenus
   const hasSubmenu = (menuItem) => {
     return menuItem === 'drivers' || menuItem === 'vehicles';
   };
 
-  // Function to determine if a menu item should be active
   const isActiveMenuItem = (menuItem) => {
     return location.pathname.startsWith('/' + menuItem);
   };
 
-  // Function to handle click on main menu item
   const handleMainMenuClick = (menuItem) => {
     if (hasSubmenu(menuItem)) {
       toggleSubMenu(menuItem);

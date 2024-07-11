@@ -437,8 +437,22 @@ line-height: 22px;
   color: #919EAB;
   font-size: 12px;
 }
+/* .investor-stats canvas {
+  height: 100% !important;
+} */
+.investor-stats {
+  border-radius: 12px;
+  border: 1px solid #EDEDED;
+  background: #FFF;
+  padding: 20px;
+}
 
 
+.graphand-stats {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
 /*****************media***************/
 @media(max-width: 1023px){
   .login-page {

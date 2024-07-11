@@ -27,8 +27,6 @@ const PriceLineGraph = () => {
   const priceData = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
   const daysData = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36];
 
-  const filteredPriceData = [priceData[0], priceData[priceData.length - 1]];
-  const filteredDaysData = [daysData[0], daysData[daysData.length - 1]];
   const data = {
     labels: daysData,
     datasets: [
@@ -53,7 +51,7 @@ const PriceLineGraph = () => {
             return index === 0 || index === priceData.length - 1 ? '#567df4' : '#567df4'; // Change border color of the first and last points
           },
       },
-    ],
+    ], 
   };
 
   const options = {
