@@ -20,7 +20,7 @@ const PendingVehicle = [
     },
     {
         id: 2,
-        vin: '1HGCM82633A000001',
+        vin: '1HGCM82633A000002',
         startDate: '2023-09-14',
         make: 'Honda',
         model: 'Accord',
@@ -28,14 +28,14 @@ const PendingVehicle = [
         year: '2020',
         PlateNumber: 'P4860189',
         PurchasePrice: '3324235',
-        FirstName: 'Text', 
+        FirstName: 'Humanshi', 
         LastName: 'Shree',
         package: 'Single Eco...',
         PackageID: '12',
       },
       {
         id: 3,
-        vin: '1HGCM82633A000001',
+        vin: '1HGCM82633A000012',
         startDate: '2023-09-14',
         make: 'Honda',
         model: 'Accord',
@@ -50,7 +50,7 @@ const PendingVehicle = [
       },
       {
         id: 4,
-        vin: '1HGCM82633A000001',
+        vin: '1HGCM82633A000022',
         startDate: '2023-09-14',
         make: 'Honda',
         model: 'Accord',
@@ -65,7 +65,7 @@ const PendingVehicle = [
       },
       {
         id: 5,
-        vin: '1HGCM82633A000001',
+        vin: '1HGCM82633A000033',
         startDate: '2023-09-14',
         make: 'Honda',
         model: 'Accord',
@@ -77,7 +77,7 @@ const PendingVehicle = [
         LastName: 'Shree',
         package: 'Single Eco...',
         PackageID: '12',
-      },
+      }, 
   ];
 
 const PendingVehicleTable = () => {
@@ -92,7 +92,10 @@ const PendingVehicleTable = () => {
     .slice(pagesVisited, pagesVisited + PendingVehiclePerPage)
     .map((alert) => (
       <tr key={alert.id}>
-        <td>{alert.vin}</td>
+        <td className='hover:text-[#019268]'><Link className='underline' to={`/pendingVehiclechange?vin=${alert.vin}`}>
+            {alert.vin}
+          </Link>
+        </td>
         <td>{alert.startDate}</td>
         <td>{alert.make}</td>
         <td>{alert.model}</td>

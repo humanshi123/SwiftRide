@@ -18,6 +18,7 @@ import Bookings from "../Pages/Bookings";
 import ActiveDrivers from "../Pages/ActiveDrivers";
 import InvestorDetails from "../Pages/InvestorDetails";
 import { PageNameProvider, usePageName } from "../Contexts/PageNameContext";
+import PendingVehicleChange from "../Pages/PendingVehicleChange";
 
 const PageWrapper = ({ children, name }) => {
   const { setPageName } = usePageName();
@@ -151,6 +152,14 @@ export default function AllRoutes() {
               element={
                 <PageWrapper name="Active Drivers">
                   <ActiveDrivers />
+                </PageWrapper>
+              }
+            />
+            <Route
+              path="/pendingVehiclechange"
+              element={
+                <PageWrapper name="">
+                  <PendingVehicleChange />
                 </PageWrapper>
               }
             />

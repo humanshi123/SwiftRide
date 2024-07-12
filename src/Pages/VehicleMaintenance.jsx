@@ -62,7 +62,7 @@ export default function VehicleMaintenance() {
         </div>
         <div className="w-[170px]">
           <button className="w-full text-emerald-600 text-sm font-bold h-[48px]  bg-white rounded-xl border border-emerald-600"
-           onClick={handleAddVehicle}>
+           onClick={handleAddVehicle}> 
             Add New Vehicle
           </button>
         </div>

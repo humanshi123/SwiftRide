@@ -131,12 +131,12 @@ const InvestorTable = () => {
     <tr key={investor.id}>
        
       <td>{investor.id}</td>
-      <td>
-      <Link to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
+      <td className='hover:text-[#019268]'>
+      <Link className='underline' to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
             {investor.firstName}
           </Link>
       </td>
-      <td> <Link to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
+      <td className='hover:text-[#019268]'> <Link className='underline' to={`/investor-details?firstName=${investor.firstName}&lastName=${investor.lastName}`}>
             {investor.lastName}
           </Link></td>
       <td>{investor.phoneNumber}</td>
